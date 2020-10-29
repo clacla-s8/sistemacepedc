@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="402.0" prefWidth="678.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.controle.ControleEmprestimoList">
+   <children>
+      <Label text="Registro de Emprestimos">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" top="10.0" />
+         </padding>
+      </Label>
+      <ToolBar prefHeight="40.0" prefWidth="200.0">
+        <items>
+          <Button fx:id="btnNovo" mnemonicParsing="false" onAction="#onBtnNovoAction" text="Novo" />
+        </items>
+      </ToolBar>
+      <TableView fx:id="tableViewEmprestimo" prefHeight="200.0" prefWidth="637.0">
+        <columns>
+          <TableColumn fx:id="tableColumnId" prefWidth="61.0" text="Id" />
+          <TableColumn fx:id="tableColumnDataEmprestimo" prefWidth="148.0" text="Data Emprestimo" />
+            <TableColumn fx:id="tableColumnDataDevolucao" minWidth="3.0" prefWidth="135.0" text="Data Devolucao" />
+            <TableColumn fx:id="tableColumnUsuario" prefWidth="75.0" text="Usuario" />
+            <TableColumn fx:id="tableColumnLivro" prefWidth="99.0" text="Livro" />
+            <TableColumn fx:id="tableColumnEDIT" prefWidth="75.0" />
+            <TableColumn fx:id="tableColumnDELETE" prefWidth="84.0" />
+        </columns>
+      </TableView>
+   </children>
+</VBox>
