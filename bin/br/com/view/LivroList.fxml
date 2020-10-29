@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="402.0" prefWidth="636.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.controle.ControleLivroList">
+   <children>
+      <Label text="Registro de Livros">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" top="10.0" />
+         </padding>
+      </Label>
+      <ToolBar prefHeight="40.0" prefWidth="200.0">
+        <items>
+          <Button fx:id="btnNovo" mnemonicParsing="false" onAction="#onBtnNovoAction" text="Novo" />
+        </items>
+      </ToolBar>
+      <TableView fx:id="tableViewLivro" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="tableColumnId" prefWidth="61.0" text="Id" />
+          <TableColumn fx:id="tableColumnNome" prefWidth="84.0" text="Nome" />
+            <TableColumn fx:id="tableColumnEditora" minWidth="3.0" prefWidth="77.0" text="Editora" />
+            <TableColumn fx:id="tableColumnAutor1" prefWidth="96.0" text="Autor1" />
+            <TableColumn fx:id="tableColumnAutor2" prefWidth="105.0" text="Autor2" />
+            <TableColumn fx:id="tableColumnQuant" prefWidth="75.0" text="Quant." />
+            <TableColumn fx:id="tableColumnEDIT" prefWidth="69.0" />
+            <TableColumn fx:id="tableColumnDELETE" prefWidth="160.0" />
+        </columns>
+      </TableView>
+   </children>
+</VBox>
